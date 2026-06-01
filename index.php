@@ -43,7 +43,7 @@ if (!empty($_POST['birthdate'])) {
 }
 
 // Валидация пола
-$allowed_genders = ['male', 'female'];
+$allowed_sex = ['male', 'female'];
 if (empty($_POST['gender'])) {
   $error_messages[] = 'Выберите пол';
   $errors = TRUE;
