@@ -93,7 +93,7 @@ try {
     $_POST['phone'] ?? null,
     $_POST['email'] ?? null,
     $_POST['birthdate'] ?? null,
-    $_POST['gender'],
+    $_POST['sex'],
     $_POST['biography'] ?? null
   ]);
   
