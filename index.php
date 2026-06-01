@@ -87,7 +87,7 @@ $db = new PDO('mysql:host=localhost;dbname=u82624', $user, $pass,
 try {
   $db->beginTransaction();
   
-  $stmt = $db->prepare("INSERT INTO users (name, phone, email, birthdate, sex, biography) VALUES (?, ?, ?, ?, ?, ?)");
+  $stmt = $db->prepare("INSERT INTO userses (name, phone, email, birthdate, sex, biography) VALUES (?, ?, ?, ?, ?, ?)");
   $stmt->execute([
     $_POST['name'],
     $_POST['phone'] ?? null,
