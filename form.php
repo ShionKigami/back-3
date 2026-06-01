@@ -8,8 +8,8 @@
   <label>Дата рождения:</label>
   <input type="date" name="birthdate" value="<?php echo isset($_POST['birthdate']) ? htmlspecialchars($_POST['birthdate']) : ''; ?>" /><br/>
   <label>Пол:</label>
-  <input type="radio" name="gender" value="male" <?php echo (isset($_POST['gender']) && $_POST['gender'] == 'male') ? 'checked' : ''; ?> /> Мужской
-  <input type="radio" name="gender" value="female" <?php echo (isset($_POST['gender']) && $_POST['gender'] == 'female') ? 'checked' : ''; ?> /> Женский<br/>
+  <input type="radio" name="sex" value="male" <?php echo (isset($_POST['gender']) && $_POST['sex'] == 'male') ? 'checked' : ''; ?> /> Мужской
+  <input type="radio" name="sex" value="female" <?php echo (isset($_POST['gender']) && $_POST['sex'] == 'female') ? 'checked' : ''; ?> /> Женский<br/>
   <label>Любимый язык программирования:</label><br/>
   <?php
   $languages = ['Pascal', 'C', 'C++', 'JavaScript', 'PHP', 'Python', 'Java', 'Haskel', 'Clojure', 'Prolog', 'Scala', 'Go'];
