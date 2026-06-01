@@ -44,10 +44,10 @@ if (!empty($_POST['birthdate'])) {
 
 // Валидация пола
 $allowed_sex = ['male', 'female'];
-if (empty($_POST['gender'])) {
+if (empty($_POST['sex'])) {
   $error_messages[] = 'Выберите пол';
   $errors = TRUE;
-} elseif (!in_array($_POST['gender'], $allowed_genders)) {
+} elseif (!in_array($_POST['sex'], $allowed_genders)) {
   $error_messages[] = 'Некорректный пол';
   $errors = TRUE;
 }
