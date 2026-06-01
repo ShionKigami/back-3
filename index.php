@@ -47,7 +47,7 @@ $allowed_sex = ['male', 'female'];
 if (empty($_POST['sex'])) {
   $error_messages[] = 'Выберите пол';
   $errors = TRUE;
-} elseif (!in_array($_POST['sex'], $allowed_genders)) {
+} elseif (!in_array($_POST['sex'], $allowed_sex)) {
   $error_messages[] = 'Некорректный пол';
   $errors = TRUE;
 }
