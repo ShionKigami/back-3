@@ -99,7 +99,7 @@ try {
   
   $user_id = $db->lastInsertId();
   
-  $lang_stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (?, ?)");
+  $lang_stmt = $db->prepare("INSERT INTO user_languages2 (user_id, language) VALUES (?, ?)");
   foreach ($_POST['languages'] as $lang) {
     $lang_stmt->execute([$user_id, $lang]);
   }
