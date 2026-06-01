@@ -3,7 +3,7 @@ header('Content-Type: text/html; charset=UTF-8');
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   if (!empty($_GET['save'])) {
-    print('Результаты сохранены');
+    print('<div class="success-message">✅ Результаты сохранены</div>');
   }
   include('form.php');
   exit();
@@ -33,7 +33,6 @@ if (!empty($_POST['email']) && !filter_var($_POST['email'], FILTER_VALIDATE_EMAI
   $errors = TRUE;
 }
 
-// Валидация даты рождения
 if (!empty($_POST['birthdate'])) {
   $date = DateTime::createFromFormat('Y-m-d', $_POST['birthdate']);
   if (!$date || $date->format('Y-m-d') !== $_POST['birthdate']) {
@@ -42,7 +41,6 @@ if (!empty($_POST['birthdate'])) {
   }
 }
 
-// Валидация пола
 $allowed_sex = ['male', 'female'];
 if (empty($_POST['sex'])) {
   $error_messages[] = 'Выберите пол';
@@ -52,7 +50,6 @@ if (empty($_POST['sex'])) {
   $errors = TRUE;
 }
 
-// Валидация любимых языков программирования
 $allowed_languages = ['Pascal', 'C', 'C++', 'JavaScript', 'PHP', 'Python', 'Java', 'Haskel', 'Clojure', 'Prolog', 'Scala', 'Go'];
 if (empty($_POST['languages'])) {
   $error_messages[] = 'Выберите хотя бы один язык';
@@ -74,7 +71,7 @@ if (empty($_POST['contract']) || $_POST['contract'] != '1') {
 
 if ($errors) {
   foreach ($error_messages as $msg) {
-    print($msg . '<br/>');
+    print('<div class="error-message">⚠️ ' . $msg . '</div>');
   }
   exit();
 }
@@ -108,8 +105,9 @@ try {
   
 } catch(PDOException $e){
   $db->rollBack();
-  print('Error : ' . $e->getMessage());
+  print('<div class="error-message">❌ Ошибка: ' . $e->getMessage() . '</div>');
   exit();
 }
 
 header('Location: ?save=1');
+?>
