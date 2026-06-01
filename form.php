@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📝 Анкета программиста</h1>
+            <h1>Анкета программиста</h1>
             <p>Заполните форму, чтобы стать частью нашего сообщества</p>
         </div>
         
@@ -22,7 +22,7 @@
             
             <form action="" method="POST">
                 <div class="form-group">
-                    <label for="name">👤 ФИО <span class="required">*</span></label>
+                    <label for="name">ФИО <span class="required">*</span></label>
                     <input type="text" 
                            id="name" 
                            name="name" 
@@ -32,7 +32,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="phone">📞 Телефон</label>
+                    <label for="phone">Телефон</label>
                     <input type="tel" 
                            id="phone" 
                            name="phone" 
@@ -41,7 +41,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="email">📧 E-mail</label>
+                    <label for="email">E-mail</label>
                     <input type="email" 
                            id="email" 
                            name="email" 
@@ -50,7 +50,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="birthdate">🎂 Дата рождения</label>
+                    <label for="birthdate">Дата рождения</label>
                     <input type="date" 
                            id="birthdate" 
                            name="birthdate" 
@@ -58,17 +58,17 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>⚧ Пол <span class="required">*</span></label>
+                    <label>Пол <span class="required">*</span></label>
                     <div class="radio-group">
                         <label class="radio-label">
                             <input type="radio" name="sex" value="male" 
                                    <?php echo (isset($_POST['sex']) && $_POST['sex'] == 'male') ? 'checked' : ''; ?>>
-                            👨 Мужской
+                            Мужской
                         </label>
                         <label class="radio-label">
                             <input type="radio" name="sex" value="female" 
                                    <?php echo (isset($_POST['sex']) && $_POST['sex'] == 'female') ? 'checked' : ''; ?>>
-                            👩 Женский
+                            Женский
                         </label>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="biography">📖 Биография</label>
+                    <label for="biography">Биография</label>
                     <textarea id="biography" 
                               name="biography" 
                               rows="5" 
@@ -106,7 +106,7 @@
                     </label>
                 </div>
                 
-                <button type="submit" class="btn-submit">💾 Сохранить анкету</button>
+                <button type="submit" class="btn-submit">Сохранить анкету</button>
             </form>
         </div>
     </div>
